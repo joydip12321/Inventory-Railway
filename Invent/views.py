@@ -199,7 +199,7 @@ def Dashboard(request):
     product_quantity=product.count()
     room=Room.objects.all()
     room_quantity=room.count()
-    sum=0;
+    sum=0
     for tot_product in product:
         sum+=tot_product.product_quantity
     
@@ -218,4 +218,4 @@ def message(request):
     context={
     'message':queryset,
    }
-    return render(request, "message.html",context);
+    return render(request, "message.html",context)
