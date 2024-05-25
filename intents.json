@@ -1,165 +1,251 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hello",
-          "Hey",
-          "hi",
-          "Hello there",
-          "Good morning",
-          "Good evening",
-          "Good afternoon"
-        ],
-        "responses": [
-          "Hello! How can I assist you today?",
-          "Hi there! What can I do for you?",
-          "Greetings! How can I help?",
-          "Hello! What can I help you with today?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": [
-          "Bye",
-          "Goodbye",
-          "See you later",
-          "See you",
-          "Take care"
-        ],
-        "responses": [
-          "Goodbye! Have a great day!",
-          "See you later! Take care!",
-          "Bye! Come back soon!",
-          "Goodbye! It was a pleasure assisting you!"
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": [
-          "Thanks",
-          "Thank you",
-          "Thanks a lot",
-          "Thank you very much",
-          "I appreciate it",
-          "Thanks for your help"
-        ],
-        "responses": [
-          "You're welcome!",
-          "Happy to help!",
-          "Anytime!",
-          "My pleasure!"
-        ]
-      },
-      {
-        "tag": "product_inquiry",
-        "patterns": [
-          "Do you have shirts?",
-          "I'm looking for pants",
-          "Show me shoes",
-          "Do you sell shoes?",
-          "What types of shirts do you have?",
-          "Can I see some pants?",
-          "I'd like to buy shoes",
-          "What shirts are available?",
-          "Do you have any pants in stock?"
-        ],
-        "responses": [
-          "Yes, we have a variety of it. What style or brand are you interested in?",
-          "We have many types of it available. Are you looking for a specific brand or style?",
-          "We have a wide selection of it. Are you looking for something specific?",
-          "Yes, we sell. What type are you looking for?"
-        ]
-      },
-      {
-        "tag": "product_availability",
-        "patterns": [
-          "Is the blue shirt in stock?",
-          "Do you have size 10 shoes?",
-          "Are the black pants available?",
-          "Can I get a red shirt?",
-          "Is there any discount on shoes?",
-          "Do you have any new arrivals in shirts?",
-          "Are there any pants on sale?"
-        ],
-        "responses": [
-          "Let me check the availability for you. Could you please provide the product name or code?",
-          "Yes, we have that in stock. Would you like to place an order?",
-          "I'm checking the inventory. Please hold on for a moment.",
-          "Yes, we have that item available. Would you like more details?"
-        ]
-      },
-      {
-        "tag": "order_status",
-        "patterns": [
-          "Where is my order?",
-          "Order status",
-          "Track my order",
-          "Can you tell me the status of my order?",
-          "How can I track my shipment?",
-          "I want to know my order status"
-        ],
-        "responses": [
-          "Please provide your order number so I can check the status for you.",
-          "You can track your order using the tracking number provided in the confirmation email.",
-          "Let me check the status for you. Can you give me your order number?",
-          "Please provide your order ID to proceed with the status check."
-        ]
-      },
-      {
-        "tag": "returns_and_refunds",
-        "patterns": [
-          "How can I return a product?",
-          "What is your return policy?",
-          "I want to return my order",
-          "Can I get a refund?",
-          "How do I process a return?",
-          "Return item",
-          "Refund policy"
-        ],
-        "responses": [
-          "You can return a product within 30 days of purchase. Please visit our returns page for more details.",
-          "To return an item, please fill out the return form on our website and follow the instructions.",
-          "Refunds are processed within 5-7 business days after we receive the returned item.",
-          "Please visit our returns and refunds page for detailed instructions."
-        ]
-      },
-      {
-        "tag": "shipping_information",
-        "patterns": [
-          "What are the shipping options?",
-          "Do you offer express shipping?",
-          "How much does shipping cost?",
-          "What is the delivery time?",
-          "Do you ship internationally?",
-          "Shipping rates",
-          "Delivery options"
-        ],
-        "responses": [
-          "We offer standard and express shipping options. Standard shipping typically takes 5-7 business days.",
-          "Yes, we offer express shipping for an additional cost. Delivery is usually within 2-3 business days.",
-          "Shipping costs vary based on your location and the shipping method chosen. Please check our shipping page for more details.",
-          "Yes, we ship internationally. Shipping rates and times vary depending on the destination."
-        ]
-      },
-      {
-        "tag": "payment_methods",
-        "patterns": [
-          "What payment methods do you accept?",
-          "Can I pay with PayPal?",
-          "Do you accept credit cards?",
-          "Is cash on delivery available?",
-          "Payment options",
-          "How can I pay for my order?"
-        ],
-        "responses": [
-          "We accept credit cards, debit cards, PayPal, and other major payment methods.",
-          "Yes, you can pay with PayPal during the checkout process.",
-          "We accept all major credit cards including Visa, MasterCard, and American Express.",
-          "Currently, we do not offer cash on delivery. Please use one of our other payment methods."
-        ]
-      }
-    ]
-  }
-  
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "hi",
+        "Hello there",
+        "Good morning",
+        "Good evening",
+        "Good afternoon"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Greetings! How can I help?",
+        "Hello! What can I help you with today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "See you",
+        "Take care"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!",
+        "Bye! Come back soon!",
+        "Goodbye! It was a pleasure assisting you!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Thank you very much",
+        "I appreciate it",
+        "Thanks for your help"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "product_inquiry",
+      "patterns": [
+        "Do you have shirts?",
+        "I'm looking for pants",
+        "Show me shoes",
+        "Do you sell shoes?",
+        "What types of shirts do you have?",
+        "Can I see some pants?",
+        "I'd like to buy shoes",
+        "What shirts are available?",
+        "Do you have any pants in stock?"
+      ],
+      "responses": [
+        "We have many types of it available. Are you looking for a specific brand or style?",
+        "We have a wide selection of it. Are you looking for something specific?",
+        "Yes, we sell. What type are you looking for?"
+      ]
+    },
+    {
+      "tag": "product_availability",
+      "patterns": [
+        "Is the blue shirt in stock?",
+        "Do you have size 10 shoes?",
+        "Are the black pants available?",
+        "Can I get a red shirt?",
+        "Is there any discount on shoes?",
+        "Do you have any new arrivals in shirts?",
+        "Are there any pants on sale?"
+      ],
+      "responses": [
+        "Let me check the availability for you. Could you please provide the product name or code?",
+        "Yes, we have that in stock. Would you like to place an order?",
+        "I'm checking the inventory. Please hold on for a moment.",
+        "Yes, we have that item available. Would you like more details?"
+      ]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "Where is my order?",
+        "Order status",
+        "Track my order",
+        "Can you tell me the status of my order?",
+        "How can I track my shipment?",
+        "I want to know my order status"
+      ],
+      "responses": [
+        "You can track your order using the tracking number provided in the confirmation email."
+
+      ]
+    },
+    {
+      "tag": "returns_and_refunds",
+      "patterns": [
+        "How can I return a product?",
+        "What is your return policy?",
+        "I want to return my order",
+        "Can I get a refund?",
+        "How do I process a return?",
+        "Return item",
+        "Refund policy"
+      ],
+      "responses": [
+        "To return an item, please fill out the return form on our website and follow the instructions.",
+        "Refunds are processed within 5-7 business days after we receive the returned item.",
+        "Please visit our returns and refunds page for detailed instructions."
+      ]
+    },
+    {
+      "tag": "shipping_information",
+      "patterns": [
+        "What are the shipping options?",
+        "Do you offer express shipping?",
+        "How much does shipping cost?",
+        "What is the delivery time?",
+        "Do you ship internationally?",
+        "Shipping rates",
+        "Delivery options"
+      ],
+      "responses": [
+        "We offer standard and express shipping options. Standard shipping typically takes 5-7 business days.",
+        "Shipping costs vary based on your location and the shipping method chosen. Please check our shipping page for more details."
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "What payment methods do you accept?",
+        "Can I pay with PayPal?",
+        "Do you accept credit cards?",
+        "Is cash on delivery available?",
+        "Payment options",
+        "How can I pay for my order?"
+      ],
+      "responses": [
+        "We accept credit cards, debit cards, PayPal,Visa, MasterCard, and American Express and other major payment methods.",
+        "Currently, we do not offer cash on delivery. Please use one of our other payment methods."
+      ]
+    },
+    {
+      "tag": "about_us",
+      "patterns": [
+        "Who are you?",
+        "Tell me about your company",
+        "What is this store?",
+        "Can you tell me about your store?"
+      ],
+      "responses": [
+        "We are an e-commerce store offering a wide range of products across various categories. Our goal is to provide the best online shopping experience.",
+        "Our store offers a variety of products from different brands. We aim to provide quality products and excellent customer service.",
+        "We are a trusted online store providing a wide range of products to meet all your needs.",
+        "Our store is committed to delivering quality products and exceptional customer service. Shop with us for a great shopping experience."
+      ]
+    },
+    {
+      "tag": "fun_facts",
+      "patterns": [
+        "Tell me a joke",
+        "Do you know any fun facts?",
+        "Make me laugh",
+        "Can you tell me something interesting?"
+      ],
+      "responses": [
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "Did you know? Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Did you know? Octopuses have three hearts. Two pump blood to the gills, while the third pumps it to the rest of the body."
+      ]
+    },
+    {
+      "tag": "brand_inquiry",
+      "patterns": [
+        "Do you sell Nike products?",
+        "Show me Adidas shoes",
+        "Do you have Puma shirts?",
+        "What brands do you carry?",
+        "Do you sell Levi's jeans?",
+        "I'm looking for Calvin Klein products",
+        "What brands of clothes do you have?"
+      ],
+      "responses": [
+        
+        "We carry a wide range of brands including Nike, Adidas, Puma, Levi's, Calvin Klein, and many more.",
+        
+        "We offer clothes from brands like Nike, Adidas, Puma, Levi's, Calvin Klein, and more. What brand are you interested in?"
+      ]
+    },
+    {
+      "tag": "delivery_details",
+      "patterns": [
+        "When will my order be delivered?",
+        "How long does delivery take?",
+        "What is the estimated delivery time?",
+        "Can you provide details on delivery?",
+        "What are the delivery timelines?"
+      ],
+      "responses": [
+      
+        "The estimated delivery time for standard shipping is 5-7 business days. Express shipping usually takes 2-3 business days.",
+        "Delivery details depend on the shipping method chosen. Standard delivery takes 5-7 business days, while express delivery takes 2-3 business days."
+      ]
+    },
+    {
+      "tag": "order_clothes",
+      "patterns": [
+        "I want to order a shirt",
+        "Can I buy a pair of pants?",
+        "I need to purchase a dress",
+        "Can I place an order for a jacket?",
+        "I want to buy some clothes"
+      ],
+      "responses": [
+        "Sure, you can browse our clothing section on the website. Do you have a specific brand or type in mind?",
+        "We have a great selection of dresses. Please check out our dresses section for the latest styles.",
+        "We have a wide range of clothes. Please specify what type of clothes you are looking for or visit our clothing section on the website."
+      ]
+    },
+    {
+      "tag": "order_shoes",
+      "patterns": [
+        "I want to buy shoes",
+        "Can I order a pair of sneakers?",
+        "I need to purchase some boots",
+        "Can I place an order for sandals?",
+        "I want to get some new shoes"
+      ],
+      "responses": [
+        "Sure, you can browse our shoe section on the website. Do you have a specific brand or type in mind?",
+        "Yes, we have a variety of sneakers available. Please visit our sneakers section for more details.",
+        "We have a great selection of boots. Please check out our boots section for the latest styles.",
+        "You can order sandals from our sandals section. Would you like any assistance in choosing a pair?",
+        "We have a wide range of shoes. Please specify what type of shoes you are looking for or visit our shoe section on the website."
+      ]
+    }
+  ]
+}
