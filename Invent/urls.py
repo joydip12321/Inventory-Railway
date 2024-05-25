@@ -18,4 +18,10 @@ urlpatterns=[
      path('update_product/<id>/',views.update_product,name="update_product"),
      path('Dashboard/',views.Dashboard,name="Dashboard"),
      path('message/',views.message,name="message"),
+     path('log_in/',views.Log_in,name="log_in"),
+     path('register_in/',views.Register_invent,name="register"),
+     path('log_out/',views.Log_out,name="log_out"),
+     path('admin_log_in/',views.Admin_log_in,name="admin_log_in")
+
+
 ]

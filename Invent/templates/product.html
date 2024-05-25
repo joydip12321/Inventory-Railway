@@ -6,8 +6,8 @@
     class="col-6 mx-auto card p-3 shadow-1g"
     method="POST"
     enctype="multipart/form-data"
-    style="background-color: rgb(236, 160, 236);"
-  >
+    style="background-color: rgb(108, 173, 171);"
+    >
     {% csrf_token %}
     <h2>Add Product</h2>
     <hr />
@@ -48,7 +48,10 @@
             {% endfor %}
         </select>
     </div>
+    {% if user.is_staff and user.is_authenticated %}
+
     <button type="submit" class="btn btn-primary">Add Product</button>
+    {% endif %}
     </form>
   <hr />
 </div>

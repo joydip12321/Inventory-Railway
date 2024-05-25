@@ -6,7 +6,7 @@
     class="col-10 mx-auto card p-3 shadow-1g"
     method="POST"
     enctype="multipart/form-data"
-    style="background-color: rgb(236, 160, 236);"
+    style="background-color: rgb(108, 173, 171);"
 
   >
     {% csrf_token %}
@@ -32,8 +32,11 @@
   
           <td>{{ room.room_no }}</td>
           <td>
+            {% if user.is_staff and user.is_authenticated %}
+
             <a href="/delete_room/{{room.id}}" class="btn btn-danger navbar-btn" style="color:black">Delete</a>
             <a href="/update_room/{{room.id}}" class="btn btn-success navbar-btn" style="color:black">Update</a>
+          {%endif%}
           </td>
         </tr>
         {% endfor %}

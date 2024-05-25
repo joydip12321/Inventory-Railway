@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!_0=vp2j0u^!$87ixg1h9a5_#g4sr^z&ny!##5b%1lhd#ke^+5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -138,15 +138,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-# Static files (CSS, JavaScript, images, etc.) settings
 STATIC_URL = '/static/'  # URL for serving static files
-STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles') # Additional directories for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files will be collected
 
-STATICFILES_DIR={
-    os.path.join(BASE_DIR , "public/static")
-}
-# Media files (user-uploaded files) settings
+# Additional directories for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'public','static')
+]
+
 MEDIA_URL = '/media/'  # URL for serving media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory where media files are stored
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

@@ -1,6 +1,76 @@
 from django.shortcuts import render,redirect
 from Invent.models import*
 from django.contrib import messages
+from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import user_passes_test,login_required
+
+
+def is_admin(user):
+    return user.is_authenticated and user.is_staff
+
+def Admin_log_in(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None and user.is_staff:
+            login(request,user)
+            
+            return redirect('/')
+        else:
+            messages.success(request, "Invalid username or password")
+        return redirect('/')
+    return render(request, 'admin_log_in.html')
+
+def Log_in(request):
+    if request.method=="POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        
+        if not User.objects.filter(username=username).exists():
+            messages.info(request, "Invalid Username")
+            return redirect('/')
+        user=authenticate(request,username=username,password=password)
+        if user is None :
+            messages.error(request, "Invalid Username or Password")
+        else:
+            login(request,user)
+            return redirect('/')
+    return render(request, "log_in.html")
+
+@login_required(login_url="/log_in/")
+def Log_out(request):
+    logout(request)
+    return redirect('/log_in/')
+
+def Register_invent(request):
+    if request.method=="POST":
+        first_name=request.POST.get('first_name')
+        last_name=request.POST.get('last_name')
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        email=request.POST.get('email')
+        if User.objects.filter(email=email).exists():
+                messages.info(request, "An account with this email already exists.")
+                return redirect('/register_in/')
+        user=User.objects.filter(username=username)
+        if user.exists():
+            messages.info(request, "Username already taken")
+            return redirect('/register_in/')
+        
+        
+        user=User.objects.create(
+            first_name=first_name,
+            last_name=last_name,
+            username=username,
+            email=email,
+        )
+        user.set_password(password)
+        user.save()
+        messages.info(request, "Accout Created Successfully")
+        return redirect('/log_in/')
+    return render(request, "register_invent.html")
 
 def Category(request):
     if request.method=="POST":
