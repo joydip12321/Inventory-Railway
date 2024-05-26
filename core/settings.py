@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-!_0=vp2j0u^!$87ixg1h9a5_#g4sr^z&ny!##5b%1lhd#ke^+5
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://inventory-railway-production-46da.up.railway.app'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
